@@ -5,7 +5,7 @@ You can use the [editor on GitHub](https://github.com/tengyalun/pubnub_EX1/edit/
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
-**LLL**
+
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
@@ -36,7 +36,8 @@ It's very easy to make some words **bold** and other words *italic* with Markdow
 
 
 
-
+**LLLLLLLLLLLLLLLLLLLL**
+*LLLLLLLLLLLLLLLLLLLLL*
 
 
 
