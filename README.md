@@ -22,10 +22,12 @@ Syntax highlighted code block
 2. List
 
 **Bold** and _Italic_ and `Code` text
+**粗體** abd_斜體_ and 'Code'  
 
+## 粗體 2
 [Link](url) and ![Image](src)
 ```
-
+ 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
