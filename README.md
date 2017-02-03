@@ -27,7 +27,23 @@ Syntax highlighted code block
 ## 粗體 2
 [Link](url) and ![Image](src)
 ```
- 
+
+It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
