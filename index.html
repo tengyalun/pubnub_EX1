@@ -25,25 +25,42 @@
   </script>
      </head>
 <body>
- // Subscribe to the demo_tutorial channel
-pubnubDemo.addListener({
-    message: function(message){
-        console.log(message)
+function publish() {
+   
+    pubnub = new PubNub({
+        publishKey : 'demo',
+        subscribeKey : 'demo'
+    })
+       
+    function publishSampleMessage() {
+        console.log("Since we're publishing on subscribe connectEvent, we're sure we'll receive the following publish.");
+        var publishConfig = {
+            channel : "hello_world",
+            message : "Hello from PubNub Docs!"
+        }
+        pubnub.publish(publishConfig, function(status, response) {
+            console.log(status, response);
+        })
     }
-})
-
-pubnubDemo.subscribe({
-    channels: ['demo_tutorial']
-});
-
-// Publish a simple message to the demo_tutorial channel
-pubnubDemo.publish({
-    message: {
-        "color" : "blue"
-    },
-    channel: 'demo_tutorial'
-});
- 
+       
+    pubnub.addListener({
+        status: function(statusEvent) {
+            if (statusEvent.category === "PNConnectedCategory") {
+                publishSampleMessage();
+            }
+        },
+        message: function(message) {
+            console.log("New Message!!", message);
+        },
+        presence: function(presenceEvent) {
+            // handle presence
+        }
+    })      
+    console.log("Subscribing..");
+    pubnub.subscribe({
+        channels: ['hello_world'] 
+    });
+};
   
   
   
