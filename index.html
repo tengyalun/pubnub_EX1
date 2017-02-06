@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  </head>
+
+
+
+
+
+
+<!-- View the Full Documentation. -->
+<!-- Include the PubNub Library -->
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.[version number].js"></script>
+
+<!-- Instantiate PubNub -->
+<script type="text/javascript">
+
+    var pubnubDemo = new PubNub({
+        publishKey: 'Ypub-c-b0e67edd-abbe-4ea4-9ddd-a02fbfbfab06',
+        subscribeKey: 'sub-c-04e8b934-e9b7-11e6-b325-02ee2ddab7fe'
+    });
+
+</script>
+
+// Subscribe to the demo_tutorial channel
+pubnubDemo.addListener({
+    message: function(message){
+        console.log(message)
+    }
+})
+
+pubnubDemo.subscribe({
+    channels: ['demo_tutorial']
+});
+
+// Publish a simple message to the demo_tutorial channel
+pubnubDemo.publish({
+    message: {
+        "color" : "blue"
+    },
+    channel: 'demo_tutorial'
+});
+
+
+<body>
+</body>
