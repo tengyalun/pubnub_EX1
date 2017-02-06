@@ -35,49 +35,9 @@ var pubnub = new PubNub({
         }
     }
 );    
-      
- pubnub.addListener({
-    status: function(statusEvent) {
-        if (statusEvent.category === "PNConnectedCategory") {
-            play();
-        } else if (statusEvent.category === "PNUnknownCategory") {
-            var newState = {
-                new: 'error'
-            };
-            pubnub.setState(
-                {
-                    state: newState 
-                },
-                function (status) {
-                    console.log(statusEvent.errorData.message)
-                }
-            );
-        } 
-    },
-    message: function(message) {
-        checkGameStatus(message);
-        updateUI(message);
-    }
-})
+
  
-pubnub.subscribe({ 
-    channels: ['tic-tac-toe'] 
-});     
-      
-pubnub.unsubscribe({
-    channels: ['some_channel']
-});      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-     
-    
+
 <body>
 
   
